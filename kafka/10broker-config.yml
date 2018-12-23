@@ -85,12 +85,12 @@ data:
     #   EXAMPLE:
     #     listeners = PLAINTEXT://your.host.name:9092
     #listeners=PLAINTEXT://:9092
-    listeners=OUTSIDE://:9094,PLAINTEXT://POD_NAME:9092
+    listeners=OUTSIDE://:9094,PLAINTEXT://#init#broker.id=#init#:9092
 
     # Hostname and port the broker will advertise to producers and consumers. If not set, 
     # it uses the value for "listeners" if configured.  Otherwise, it will use the value
     # returned from java.net.InetAddress.getCanonicalHostName().
-    advertised.listeners=PLAINTEXT://POD_NAME:9092
+    advertised.listeners=PLAINTEXT://#init#broker.id=#init#:9092
     #init#advertised.listeners=OUTSIDE://#init#,PLAINTEXT://:9092
 
     # Maps listener names to security protocols, the default is for them to be the same. See the config documentation for more details
