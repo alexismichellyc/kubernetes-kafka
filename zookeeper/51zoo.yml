@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: zookeeper
-      storage: persistent-regional
+      storage: persistent
   serviceName: "zoo"
   replicas: 2
   updateStrategy:
@@ -17,7 +17,7 @@ spec:
     metadata:
       labels:
         app: zookeeper
-        storage: persistent-regional
+        storage: persistent
       annotations:
     spec:
       terminationGracePeriodSeconds: 10
@@ -83,7 +83,7 @@ spec:
       name: data
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: kafka-zookeeper-regional
+      storageClassName: kafka-zookeeper
       resources:
         requests:
           storage: 1Gi
